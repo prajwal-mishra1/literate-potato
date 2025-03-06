@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: Computer System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+        }
+        h1 {
+            text-align: center; 
+            font-size: 36px; 
+            font-weight: bold; 
+            color: #333; 
+            margin-bottom: 20px; 
+        }
+        .menu {
+            width: 250px;
+            background: #333;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            border-right: 2px solid #444;
+        }
+
+        .menu.hidden {
+            transform: translateX(-100%);
+        }
+
+        .menu h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin: 15px 0;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            background: #555;
+            padding: 12px;
+            display: block;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .menu ul li a:hover {
+            background: #ff9800;
+        }
+
+        /* Menu Toggle Button Styles */
+        .menu-toggle {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-toggle:hover {
+            background: #e68900;
+        }
+        .content-wrapper {
+            margin-left: 270px;
+            width: calc(100% - 270px);
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .content-wrapper.full-width {
+            margin-left: 0;
+            width: 100%;
+        }
+        .content {
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
+            padding: 20px;
+            background: white;
+        }
+        .qa-section {
+            margin-top: 40px;
+        }
+
+        .question {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #ff9800;
+        }
+
+        .answer {
+            background-color: #e1f5fe;
+            padding: 15px;
+            margin-top: 10px;
+            border-left: 5px solid #2196f3;
+        }
+
+        .question h3 {
+            color: #333;
+        }
+
+        .answer p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+        <h2>Class 11 <br>Computer Science</h2>
+        <ul>
+            <li><a href="website.html">Home</a></li>
+            <li><a href="chapter1.html">1. Computer System</a></li>
+            <li><a href="chapter2.html">2. Number System and Boolean Logic</a></li>
+            <li><a href="chapter3.html">3. Computer Software and Operating System</a></li>
+            <li><a href="chapter4.html">4. Application Package</a></li>
+            <li><a href="chapter5.html">5. Programming Concepts and Logics</a></li>
+            <li><a href="chapter6.html">6. Web Technology</a></li>
+            <li><a href="chapter7.html">7. Multimedia</a></li>
+            <li><a href="chapter8.html">8. Information Security and Cyber Law</a></li>
+        </ul>
+    </div>
+    <div class="content-wrapper" id="content-wrapper">
+        <div class="content">
+            <h1>Web Technology</h1>
+            <p>Web technology refers to the tools and techniques used to create, develop, and manage websites and web applications. It encompasses various technologies such as HTML, CSS, JavaScript, and web servers.</p>
+        
+            <h2>1. Introduction to Web Technology</h2>
+            <p>Web technology enables the creation of interactive and dynamic web pages that users can access over the internet. It includes web design, development, and deployment.</p>
+        
+            <h2>2. Basics of HTML</h2>
+            <p>HTML (HyperText Markup Language) is the standard language for creating web pages. It defines the structure of web pages using elements such as headings, paragraphs, links, and images.</p>
+            
+            <h3>2.1 HTML Elements</h3>
+            <p>HTML consists of various elements that define the content and layout of a webpage.</p>
+            <ul>
+                <li><strong>Headings:</strong> Defined using &lt;h1&gt; to &lt;h6&gt; tags.</li>
+                <li><strong>Paragraphs:</strong> Defined using the &lt;p&gt; tag.</li>
+                <li><strong>Links:</strong> Created using the &lt;a&gt; tag.</li>
+                <li><strong>Images:</strong> Inserted using the &lt;img&gt; tag.</li>
+            </ul>
+        
+            <h2>3. Introduction to CSS</h2>
+            <p>CSS (Cascading Style Sheets) is used to style HTML elements, providing design and layout to web pages.</p>
+            
+            <h3>3.1 CSS Properties</h3>
+            <p>CSS allows for various styling properties such as:</p>
+            <ul>
+                <li><strong>Color:</strong> Changes text and background colors.</li>
+                <li><strong>Font:</strong> Defines text size, style, and family.</li>
+                <li><strong>Margin & Padding:</strong> Controls spacing around elements.</li>
+            </ul>
+        
+            <h2>4. Introduction to JavaScript</h2>
+            <p>JavaScript is a scripting language that adds interactivity and functionality to web pages.</p>
+        
+            <h3>4.1 JavaScript Features</h3>
+            <ul>
+                <li><strong>DOM Manipulation:</strong> Modifies web page content dynamically.</li>
+                <li><strong>Event Handling:</strong> Responds to user interactions.</li>
+                <li><strong>Form Validation:</strong> Ensures data accuracy in web forms.</li>
+            </ul>
+        
+            <h2>5. Web Hosting and Domain Names</h2>
+            <p>Web hosting provides space on servers to store website files, while domain names serve as addresses to access websites.</p>
+        
+            <h3>5.1 Types of Web Hosting</h3>
+            <ul>
+                <li><strong>Shared Hosting:</strong> Multiple websites share a single server.</li>
+                <li><strong>Dedicated Hosting:</strong> A single website has an entire server.</li>
+                <li><strong>Cloud Hosting:</strong> Uses multiple servers for flexibility and scalability.</li>
+            </ul>
+        
+            <h2>6. Conclusion</h2>
+            <p>Web technology plays a crucial role in the digital world, enabling the development of engaging and interactive websites. Understanding HTML, CSS, JavaScript, and web hosting is essential for building effective web solutions.</p>
+            <div class="qa-section">
+                <h2 style="text-align: center;">Chapter 6: Web Technology</h2>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q1: What is Web Technology?</h3>
+                    <div class="answer">
+                        <p>Web Technology refers to the tools, programming languages, and protocols used to develop and manage websites and web applications.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q2: What are the main components of Web Technology?</h3>
+                    <div class="answer">
+                        <ul style="display: inline-block; text-align: left;">
+                            <li><strong>Frontend Technologies:</strong> HTML, CSS, JavaScript.</li>
+                            <li><strong>Backend Technologies:</strong> PHP, Python, Node.js.</li>
+                            <li><strong>Databases:</strong> MySQL, MongoDB.</li>
+                            <li><strong>Web Servers:</strong> Apache, Nginx.</li>
+                            <li><strong>Protocols:</strong> HTTP, HTTPS, FTP.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q3: What is the difference between Static and Dynamic Websites?</h3>
+                    <div class="answer">
+                        <p><strong>Static Websites:</strong> Display the same content for all users and do not require server-side processing.</p>
+                        <p><strong>Dynamic Websites:</strong> Generate content based on user interactions and database queries.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q4: What is HTML, and why is it important?</h3>
+                    <div class="answer">
+                        <p>HTML (HyperText Markup Language) is the standard language used to create the structure of web pages. It defines the content and layout of a webpage.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q5: What is CSS, and how does it work?</h3>
+                    <div class="answer">
+                        <p>CSS (Cascading Style Sheets) is used to style and format HTML elements, controlling colors, fonts, layouts, and responsiveness.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q6: What is JavaScript, and why is it used in Web Development?</h3>
+                    <div class="answer">
+                        <p>JavaScript is a programming language used to create interactive and dynamic content on websites, such as animations, forms, and real-time updates.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q7: What is the difference between Client-side and Server-side Scripting?</h3>
+                    <div class="answer">
+                        <p><strong>Client-side Scripting:</strong> Runs on the user's browser (e.g., JavaScript).</p>
+                        <p><strong>Server-side Scripting:</strong> Runs on the web server and generates dynamic responses (e.g., PHP, Python, Node.js).</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q8: What is a Web Server?</h3>
+                    <div class="answer">
+                        <p>A web server is software or hardware that serves web pages to users based on requests made via a browser (e.g., Apache, Nginx).</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q9: What are HTTP and HTTPS?</h3>
+                    <div class="answer">
+                        <p><strong>HTTP (HyperText Transfer Protocol):</strong> A protocol for transferring data between web servers and browsers.</p>
+                        <p><strong>HTTPS (Secure HTTP):</strong> A secure version of HTTP that encrypts data using SSL/TLS for better security.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q10: What is a Domain Name and Web Hosting?</h3>
+                    <div class="answer">
+                        <p><strong>Domain Name:</strong> The unique address of a website (e.g., www.example.com).</p>
+                        <p><strong>Web Hosting:</strong> A service that provides storage space and resources to make a website accessible online.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q11: What is SEO (Search Engine Optimization)?</h3>
+                    <div class="answer">
+                        <p>SEO is the practice of optimizing websites to rank higher on search engines like Google, improving visibility and traffic.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q12: What is a CMS (Content Management System)?</h3>
+                    <div class="answer">
+                        <p>A CMS is a platform that allows users to create, manage, and modify website content without coding knowledge (e.g., WordPress, Joomla).</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q13: What is Responsive Web Design?</h3>
+                    <div class="answer">
+                        <p>Responsive Web Design ensures that websites adapt and function well on different screen sizes, including desktops, tablets, and smartphones.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q14: What are Web APIs?</h3>
+                    <div class="answer">
+                        <p>Web APIs (Application Programming Interfaces) allow web applications to communicate and exchange data with external services or databases.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q15: What is a Progressive Web App (PWA)?</h3>
+                    <div class="answer">
+                        <p>A PWA is a web application that provides an app-like experience, works offline, and loads faster using service workers.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let contentWrapper = document.getElementById("content-wrapper");
+            menu.classList.toggle("hidden");
+            contentWrapper.classList.toggle("full-width");
+        }
+    </script>
+</body>
+</html>

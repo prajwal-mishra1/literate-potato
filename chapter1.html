@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: Computer System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+        }
+
+
+        /* Sidebar Menu Styles */
+        .menu {
+            width: 250px;
+            background: #333;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            border-right: 2px solid #444;
+        }
+
+        .menu.hidden {
+            transform: translateX(-100%);
+        }
+
+        .menu h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin: 15px 0;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            background: #555;
+            padding: 12px;
+            display: block;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .menu ul li a:hover {
+            background: #ff9800;
+        }
+
+        /* Menu Toggle Button Styles */
+        .menu-toggle {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-toggle:hover {
+            background: #e68900;
+        }
+        .content-wrapper {
+            margin-left: 270px;
+            width: calc(100% - 270px);
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .content-wrapper.full-width {
+            margin-left: 0;
+            width: 100%;
+        }
+        .content {
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
+            padding: 20px;
+            background: white;
+        }
+
+        h1 {
+    text-align: center; 
+    font-size: 36px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 20px; 
+}
+
+        /* Styling for Questions and Solutions */
+        .qa-section {
+            margin-top: 40px;
+        }
+
+        .question {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #ff9800;
+        }
+
+        .answer {
+            background-color: #e1f5fe;
+            padding: 15px;
+            margin-top: 10px;
+            border-left: 5px solid #2196f3;
+        }
+
+        .question h3 {
+            color: #333;
+        }
+
+        .answer p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+        <h2>Class 11 <br>Computer Science</h2>
+        <ul>
+            <li><a href="website.html">Home</a></li>
+            <li><a href="chapter1.html">1. Computer System</a></li>
+            <li><a href="chapter2.html">2. Number System and Boolean Logic</a></li>
+            <li><a href="chapter3.html">3. Computer Software and Operating System</a></li>
+            <li><a href="chapter4.html">4. Application Package</a></li>
+            <li><a href="chapter5.html">5. Programming Concepts and Logics</a></li>
+            <li><a href="chapter6.html">6. Web Technology</a></li>
+            <li><a href="chapter7.html">7. Multimedia</a></li>
+            <li><a href="chapter8.html">8. Information Security and Cyber Law</a></li>
+        </ul>
+    </div>
+    <div class="content-wrapper" id="content-wrapper">
+        <div class="content">
+            <h1>Computer System</h1>
+            <p>A computer system is an integrated combination of hardware and software that performs computations, processes data, and executes tasks. It consists of multiple components that work together to receive, process, store, and output information.</p>
+            
+            <h2>1. Components of a Computer System</h2>
+            
+            <h3>1.1 Hardware</h3>
+            <p>Hardware refers to the physical components of a computer system, including:</p>
+            <ul>
+                <li><strong>Central Processing Unit (CPU):</strong> Also called the "brain" of the computer, it carries out instructions by performing arithmetic and logical operations.</li>
+                <li><strong>Memory (RAM):</strong> Random Access Memory (RAM) stores temporary data that the CPU needs while executing tasks.</li>
+                <li><strong>Storage Devices:</strong> Hard Disk Drives (HDD) and Solid-State Drives (SSD) are used for long-term data storage.</li>
+                <li><strong>Input Devices:</strong> Devices such as keyboards, mice, and scanners allow users to input data.</li>
+                <li><strong>Output Devices:</strong> Monitors, printers, and speakers display or produce the results of computing operations.</li>
+            </ul>
+            
+            <h3>1.2 Software</h3>
+            <p>Software is the set of programs and operating systems that control the computer hardware and allow users to perform tasks.</p>
+            <ul>
+                <li><strong>System Software:</strong> Includes operating systems like Windows, Linux, and macOS, which manage hardware resources.</li>
+                <li><strong>Application Software:</strong> Includes programs like word processors, web browsers, and media players that help users accomplish specific tasks.</li>
+            </ul>
+
+            <h2>2. Working of a Computer System</h2>
+            <p>A computer operates on the Input-Process-Output (IPO) cycle:</p>
+            <ul>
+                <li><strong>Input:</strong> The user provides data through input devices such as a keyboard or mouse.</li>
+                <li><strong>Processing:</strong> The CPU processes the input data according to instructions from the software.</li>
+                <li><strong>Storage:</strong> Data is either temporarily stored in RAM or permanently stored in hard drives or SSDs.</li>
+                <li><strong>Output:</strong> The processed information is displayed on output devices like monitors or printed on paper.</li>
+            </ul>
+
+            <h2>3. Types of Computer Systems</h2>
+            <p>Computer systems are classified based on their size, functionality, and usage:</p>
+            <ul>
+                <li><strong>Supercomputers:</strong> Extremely powerful machines used for complex scientific calculations and research.</li>
+                <li><strong>Mainframe Computers:</strong> Large, multi-user computers used by organizations for handling massive data processing.</li>
+                <li><strong>Personal Computers (PCs):</strong> Commonly used computers designed for personal and office work.</li>
+                <li><strong>Embedded Systems:</strong> Specialized computers embedded within devices like cars, appliances, and medical equipment.</li>
+            </ul>
+
+            <h2>4. Evolution of Computers</h2>
+            <p>The development of computers can be divided into five generations:</p>
+            <ul>
+                <li><strong>First Generation (1940-1956):</strong> Used vacuum tubes and were very large in size.</li>
+                <li><strong>Second Generation (1956-1963):</strong> Used transistors, which made them faster and more efficient.</li>
+                <li><strong>Third Generation (1964-1971):</strong> Used integrated circuits (ICs), which reduced size and improved performance.</li>
+                <li><strong>Fourth Generation (1971-Present):</strong> Uses microprocessors, which are compact and highly powerful.</li>
+                <li><strong>Fifth Generation (Future):</strong> Focuses on artificial intelligence and quantum computing.</li>
+            </ul>
+
+            <h2>5. Importance of Computer Systems</h2>
+            <p>Computer systems play a vital role in various fields, such as:</p>
+            <ul>
+                <li><strong>Education:</strong> Used for online learning, research, and educational software.</li>
+                <li><strong>Healthcare:</strong> Helps in diagnostics, patient management, and medical research.</li>
+                <li><strong>Business:</strong> Facilitates financial transactions, record-keeping, and automation.</li>
+                <li><strong>Entertainment:</strong> Used for gaming, video streaming, and digital content creation.</li>
+            </ul>
+
+            <div class="qa-section">
+                <h2>Questions & Solutions</h2>
+
+               
+                <div class="question">
+                    <h3>Q: What is the role of the CPU in a computer system?</h3>
+                    <div class="answer">
+                        <p>The CPU, or Central Processing Unit, is the brain of the computer. It performs arithmetic and logical operations and executes instructions provided by the software. It is responsible for processing data and controlling other hardware components.</p>
+                    </div>
+                </div>
+
+               
+                <div class="question">
+                    <h3>Q: Differentiate between RAM and storage devices like HDD and SSD.</h3>
+                    <div class="answer">
+                        <p>RAM (Random Access Memory) is a temporary memory that stores data being actively used or processed by the CPU. It is fast but volatile, meaning its contents are lost when the computer is turned off. On the other hand, HDD (Hard Disk Drive) and SSD (Solid-State Drive) are storage devices used to store data permanently. SSDs are faster and more durable than HDDs.</p>
+                    </div>
+                </div>
+
+                
+                <div class="question">
+                    <h3>Q: What are embedded systems? Give an example.</h3>
+                    <div class="answer">
+                        <p>Embedded systems are specialized computer systems built into other devices to perform specific tasks. They are designed for efficiency and reliability. An example is the microcontroller in a microwave oven that controls its functions.</p>
+                    </div>
+                </div>
+
+                <div class="question">
+                    <h3>Q: What is the role of the CPU in a computer system?</h3>
+                    <div class="answer">
+                        <p>The CPU, or Central Processing Unit, is responsible for executing instructions and performing calculations. It acts as the "brain" of the computer, processing data and controlling other hardware components.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is the difference between RAM and ROM?</h3>
+                    <div class="answer">
+                        <p>RAM (Random Access Memory) is temporary memory that stores data that is actively used by the CPU. ROM (Read-Only Memory) is permanent memory that stores critical instructions for booting the computer and performing hardware functions.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What are input and output devices?</h3>
+                    <div class="answer">
+                        <p>Input devices are used to enter data into a computer, such as keyboards, mice, and scanners. Output devices display or produce the result of computations, such as monitors, printers, and speakers.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is the function of the motherboard?</h3>
+                    <div class="answer">
+                        <p>The motherboard is the main circuit board that houses the CPU, memory, and other essential components. It allows communication between different hardware components in the computer system.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is the role of an operating system?</h3>
+                    <div class="answer">
+                        <p>An operating system (OS) manages the hardware and software resources of a computer, providing a user interface, controlling peripheral devices, and executing programs.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is the difference between system software and application software?</h3>
+                    <div class="answer">
+                        <p>System software includes the operating system and utilities that manage hardware. Application software refers to programs that perform specific tasks for the user, like word processors or web browsers.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is a hard disk drive (HDD)?</h3>
+                    <div class="answer">
+                        <p>A hard disk drive (HDD) is a storage device that uses rotating disks to read and write data. It provides long-term data storage and is commonly used in computers and laptops.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is the purpose of a power supply unit (PSU)?</h3>
+                    <div class="answer">
+                        <p>The power supply unit (PSU) converts electrical power from an outlet into a usable form for the computer’s internal components, providing stable and regulated power to the system.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What are the differences between a desktop and a laptop?</h3>
+                    <div class="answer">
+                        <p>A desktop is a stationary computer that requires an external monitor, keyboard, and mouse, while a laptop is portable and integrates all components into a single unit, including the screen, keyboard, and trackpad.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is the function of a graphics processing unit (GPU)?</h3>
+                    <div class="answer">
+                        <p>A graphics processing unit (GPU) is responsible for rendering images, video, and animations. It handles the heavy graphical tasks that the CPU cannot efficiently process, enhancing visual performance in games and applications.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is the difference between a virus and malware?</h3>
+                    <div class="answer">
+                        <p>A virus is a type of malicious software that attaches itself to programs or files and spreads to other systems. Malware is a broader term that refers to any malicious software designed to harm or exploit systems, including viruses, worms, and trojans.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is cloud computing?</h3>
+                    <div class="answer">
+                        <p>Cloud computing is the delivery of computing services (like storage, servers, databases, and software) over the internet, enabling users to access resources on-demand without maintaining physical infrastructure.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is a compiler?</h3>
+                    <div class="answer">
+                        <p>A compiler is a software tool that translates high-level programming code into machine code or intermediate code that can be executed by a computer.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is the purpose of a firewall?</h3>
+                    <div class="answer">
+                        <p>A firewall is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules, helping to protect the computer from unauthorized access or attacks.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What are input and output ports on a computer?</h3>
+                    <div class="answer">
+                        <p>Input and output ports are physical connectors on a computer used to attach external devices. Input ports receive data (e.g., keyboard or mouse), while output ports send data (e.g., monitor or printer).</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is a motherboard chipset?</h3>
+                    <div class="answer">
+                        <p>The motherboard chipset is a set of integrated circuits that control communication between the CPU, memory, storage devices, and other components, ensuring smooth operation of the system.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is a backup in computing?</h3>
+                    <div class="answer">
+                        <p>A backup is a copy of data or files stored separately from the original source. It is used to prevent data loss in case of system failure or accidental deletion.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is an IP address?</h3>
+                    <div class="answer">
+                        <p>An IP address (Internet Protocol address) is a unique identifier assigned to devices connected to a network. It allows devices to communicate with each other over the internet.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is a network switch?</h3>
+                    <div class="answer">
+                        <p>A network switch is a device that connects multiple devices in a local area network (LAN), allowing them to communicate with each other efficiently by directing data to the appropriate destination device.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q: What is a URL?</h3>
+                    <div class="answer">
+                        <p>A URL (Uniform Resource Locator) is the web address used to locate a specific resource on the internet, such as a website or a file.</p>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let contentWrapper = document.getElementById("content-wrapper");
+            menu.classList.toggle("hidden");
+            contentWrapper.classList.toggle("full-width");
+        }
+    </script>
+</body>
+</html>

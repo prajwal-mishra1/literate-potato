@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 2: Number System and Boolean Logic</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+        }
+        h1 {
+    text-align: center; 
+    font-size: 36px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 20px; 
+}
+.menu {
+            width: 250px;
+            background: #333;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            border-right: 2px solid #444;
+        }
+
+        .menu.hidden {
+            transform: translateX(-100%);
+        }
+
+        .menu h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin: 15px 0;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            background: #555;
+            padding: 12px;
+            display: block;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .menu ul li a:hover {
+            background: #ff9800;
+        }
+
+        /* Menu Toggle Button Styles */
+        .menu-toggle {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-toggle:hover {
+            background: #e68900;
+        }
+        .content-wrapper {
+            margin-left: 270px;
+            width: calc(100% - 270px);
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .content-wrapper.full-width {
+            margin-left: 0;
+            width: 100%;
+        }
+        .content {
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
+            padding: 20px;
+            background: white;
+        }
+
+        .qa-section {
+            margin-top: 40px;
+        }
+
+        .question {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #ff9800;
+        }
+
+        .answer {
+            background-color: #e1f5fe;
+            padding: 15px;
+            margin-top: 10px;
+            border-left: 5px solid #2196f3;
+        }
+
+        .question h3 {
+            color: #333;
+        }
+
+        .answer p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+        <h2>Class 11 <br>Computer Science</h2>
+        <ul>
+            <li><a href="website.html">Home</a></li>
+            <li><a href="chapter1.html">1. Computer System</a></li>
+            <li><a href="chapter2.html">2. Number System and Boolean Logic</a></li>
+            <li><a href="chapter3.html">3. Computer Software and Operating System</a></li>
+            <li><a href="chapter4.html">4. Application Package</a></li>
+            <li><a href="chapter5.html">5. Programming Concepts and Logics</a></li>
+            <li><a href="chapter6.html">6. Web Technology</a></li>
+            <li><a href="chapter7.html">7. Multimedia</a></li>
+            <li><a href="chapter8.html">8. Information Security and Cyber Law</a></li>
+        </ul>
+    </div>
+    <div class="content-wrapper" id="content-wrapper">
+        <div class="content">
+            <h1>Number System and Boolean Logic</h1>
+            
+            <h2>1. Number System</h2>
+            <p>A number system is a mathematical notation for representing numbers using digits or symbols in a consistent manner. Different number systems are used in computing for data representation.</p>
+            
+            <h3>1.1 Types of Number Systems</h3>
+            <ul>
+                <li><strong>Decimal (Base 10):</strong> Uses digits 0-9. This is the standard number system used in daily life.</li>
+                <li><strong>Binary (Base 2):</strong> Uses only 0 and 1. It is the fundamental number system in computing.</li>
+                <li><strong>Octal (Base 8):</strong> Uses digits 0-7. It is often used as a shorthand for binary representation.</li>
+                <li><strong>Hexadecimal (Base 16):</strong> Uses digits 0-9 and letters A-F. It is widely used in computer memory addressing.</li>
+            </ul>
+
+            <h3>1.2 Number System Conversion</h3>
+            <p>Converting numbers between different number systems is essential in computing. The common conversions include:</p>
+            <ul>
+                <li><strong>Decimal to Binary:</strong> Divide by 2 and write the remainders in reverse order.</li>
+                <li><strong>Binary to Decimal:</strong> Multiply each digit by 2 raised to its position power and sum the results.</li>
+                <li><strong>Binary to Octal:</strong> Group bits into sets of three and convert each to its octal equivalent.</li>
+                <li><strong>Binary to Hexadecimal:</strong> Group bits into sets of four and convert each to its hexadecimal equivalent.</li>
+            </ul>
+
+            <h2>2. Boolean Logic</h2>
+            <p>Boolean Logic is a branch of algebra dealing with true and false values, used in digital circuits and programming.</p>
+
+            <h3>2.1 Boolean Operators</h3>
+            <ul>
+                <li><strong>AND (⋅):</strong> Returns true if both inputs are true.</li>
+                <li><strong>OR (+):</strong> Returns true if at least one input is true.</li>
+                <li><strong>NOT (¬):</strong> Reverses the input value (true becomes false and vice versa).</li>
+            </ul>
+
+            <h3>2.2 Truth Tables</h3>
+            <p>A truth table represents how Boolean operators work:</p>
+            <table border="1" cellpadding="5">
+                <tr>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>A AND B</th>
+                    <th>A OR B</th>
+                    <th>NOT A</th>
+                </tr>
+                <tr>
+                    <td>0</td><td>0</td><td>0</td><td>0</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>0</td><td>1</td><td>0</td><td>1</td><td>1</td>
+                </tr>
+                <tr>
+                    <td>1</td><td>0</td><td>0</td><td>1</td><td>0</td>
+                </tr>
+                <tr>
+                    <td>1</td><td>1</td><td>1</td><td>1</td><td>0</td>
+                </tr>
+            </table>
+
+            <h3>2.3 Boolean Expressions and Logic Gates</h3>
+            <p>Boolean expressions represent logical operations, and logic gates are hardware implementations of these operations:</p>
+            <ul>
+                <li><strong>AND Gate:</strong> Outputs 1 only if both inputs are 1.</li>
+                <li><strong>OR Gate:</strong> Outputs 1 if at least one input is 1.</li>
+                <li><strong>NOT Gate:</strong> Inverts the input signal.</li>
+                <li><strong>NAND, NOR, XOR, XNOR Gates:</strong> Variations of basic gates used in digital circuits.</li>
+            </ul>
+
+            <h2>3. Applications of Boolean Logic</h2>
+            <p>Boolean Logic is essential in computing and technology:</p>
+            <ul>
+                <li><strong>Digital Electronics:</strong> Used in circuit design and microprocessors.</li>
+                <li><strong>Programming:</strong> Helps in decision-making structures like "if" statements.</li>
+                <li><strong>Data Search:</strong> Used in database queries and search engines.</li>
+            </ul>
+
+            <p>Understanding number systems and Boolean Logic is fundamental in computer science and digital technology.</p>
+            <div class="qa-section">
+                <h2>Questions & Solutions</h2>
+                <div class="question">
+                    <h3>Q1: What is the Decimal Number System?</h3>
+                    <div class="answer">
+                        <p>The Decimal Number System, also known as Base 10, uses digits 0-9. It is the standard number system used in everyday life.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q2: What is the Binary Number System?</h3>
+                    <div class="answer">
+                        <p>The Binary Number System, or Base 2, uses only two digits: 0 and 1. It is fundamental to computers and digital systems.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q3: How do you convert Decimal to Binary?</h3>
+                    <div class="answer">
+                        <p>To convert a decimal number to binary, repeatedly divide the number by 2 and record the remainders in reverse order.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q4: How do you convert Binary to Decimal?</h3>
+                    <div class="answer">
+                        <p>To convert binary to decimal, multiply each bit by 2 raised to the power of its position and sum the results.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q5: What is an Octal Number System?</h3>
+                    <div class="answer">
+                        <p>The Octal Number System, or Base 8, uses digits from 0 to 7. It is often used as a shorthand for binary representation.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q6: How do you convert Binary to Octal?</h3>
+                    <div class="answer">
+                        <p>To convert binary to octal, group the binary digits into sets of three starting from the right and convert each group to its octal equivalent.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q7: What is a Hexadecimal Number System?</h3>
+                    <div class="answer">
+                        <p>The Hexadecimal Number System, or Base 16, uses digits 0-9 and letters A-F to represent values. It is commonly used in programming and computer memory addressing.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q8: How do you convert Binary to Hexadecimal?</h3>
+                    <div class="answer">
+                        <p>To convert binary to hexadecimal, group the binary digits into sets of four starting from the right and convert each group to its hexadecimal equivalent.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q9: What is Boolean Logic?</h3>
+                    <div class="answer">
+                        <p>Boolean Logic is a branch of algebra dealing with true and false values, used in digital circuits, programming, and computer science.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q10: What does the AND operator do?</h3>
+                    <div class="answer">
+                        <p>The AND operator returns true if both inputs are true. It is denoted by a dot (⋅).</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q11: What does the OR operator do?</h3>
+                    <div class="answer">
+                        <p>The OR operator returns true if at least one input is true. It is denoted by a plus (+).</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q12: What does the NOT operator do?</h3>
+                    <div class="answer">
+                        <p>The NOT operator reverses the input value. If the input is true, it becomes false, and vice versa. It is denoted by a negation symbol (¬).</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q13: What is a Truth Table?</h3>
+                    <div class="answer">
+                        <p>A Truth Table shows all possible outcomes of a Boolean expression by listing all input combinations and their corresponding results.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q14: What is an AND Gate?</h3>
+                    <div class="answer">
+                        <p>An AND Gate is a digital logic gate that outputs 1 only if both of its inputs are 1.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q15: What is an OR Gate?</h3>
+                    <div class="answer">
+                        <p>An OR Gate is a digital logic gate that outputs 1 if at least one of its inputs is 1.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q16: What is a NOT Gate?</h3>
+                    <div class="answer">
+                        <p>A NOT Gate is a digital logic gate that inverts the input signal. If the input is 1, the output is 0, and vice versa.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q17: What are NAND, NOR, XOR, and XNOR Gates?</h3>
+                    <div class="answer">
+                        <p>NAND, NOR, XOR, and XNOR gates are variations of basic logic gates that produce different outputs based on the combination of inputs. They are widely used in digital circuits.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q18: What is the importance of Boolean Logic in Digital Electronics?</h3>
+                    <div class="answer">
+                        <p>Boolean Logic is essential in digital electronics as it forms the foundation for designing circuits and microprocessors used in computers and other devices.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q19: How is Boolean Logic used in Programming?</h3>
+                    <div class="answer">
+                        <p>In programming, Boolean Logic helps in decision-making structures, such as "if" statements, to control the flow of execution based on logical conditions.</p>
+                    </div>
+                </div>
+                
+                <div class="question">
+                    <h3>Q20: How is Boolean Logic applied in Data Search?</h3>
+                    <div class="answer">
+                        <p>Boolean Logic is used in database queries and search engines to combine search terms and filter results based on logical conditions.</p>
+                    </div>
+                </div>
+        </div>
+        
+            
+        
+    </div>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let contentWrapper = document.getElementById("content-wrapper");
+            menu.classList.toggle("hidden");
+            contentWrapper.classList.toggle("full-width");
+        }
+    </script>
+</body>
+</html>

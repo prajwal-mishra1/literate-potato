@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 3: Computer Software and Operating System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            
+        }
+
+        h1 {
+            text-align: center; 
+            font-size: 36px; 
+            font-weight: bold; 
+            color: #333; 
+            margin-bottom: 20px; 
+        }
+
+        .menu {
+            width: 250px;
+            background: #333;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            border-right: 2px solid #444;
+        }
+
+        .menu.hidden {
+            transform: translateX(-100%);
+        }
+
+        .menu h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin: 15px 0;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            background: #555;
+            padding: 12px;
+            display: block;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .menu ul li a:hover {
+            background: #ff9800;
+        }
+
+        /* Menu Toggle Button Styles */
+        .menu-toggle {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-toggle:hover {
+            background: #e68900;
+        }
+        .content-wrapper {
+            margin-left: 270px;
+            width: calc(100% - 270px);
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .content-wrapper.full-width {
+            margin-left: 0;
+            width: 100%;
+        }
+        .content {
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
+            padding: 20px;
+            background: rgb(255, 255, 255);
+        }
+        .qa-section {
+            margin-top: 40px;
+        }
+
+        .question {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #ff9800;
+        }
+
+        .answer {
+            background-color: #e1f5fe;
+            padding: 15px;
+            margin-top: 10px;
+            border-left: 5px solid #2196f3;
+        }
+
+        .question h3 {
+            color: #333;
+        }
+
+        .answer p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+        <h2>Class 11 <br>Computer Science</h2>
+        <ul>
+            <li><a href="website.html">Home</a></li>
+            <li><a href="chapter1.html">1. Computer System</a></li>
+            <li><a href="chapter2.html">2. Number System and Boolean Logic</a></li>
+            <li><a href="chapter3.html">3. Computer Software and Operating System</a></li>
+            <li><a href="chapter4.html">4. Application Package</a></li>
+            <li><a href="chapter5.html">5. Programming Concepts and Logics</a></li>
+            <li><a href="chapter6.html">6. Web Technology</a></li>
+            <li><a href="chapter7.html">7. Multimedia</a></li>
+            <li><a href="chapter8.html">8. Information Security and Cyber Law</a></li>
+        </ul>
+    </div>
+    <div class="content-wrapper" id="content-wrapper">
+        <div class="content">
+            <h1>Computer Software and Operating System</h1>
+            <p>Computer software is a collection of programs, procedures, and routines associated with the operation of a computer system. It enables users to interact with the computer hardware and perform specific tasks. There are two main types of software: system software and application software.</p>
+            
+            <h2>1. System Software</h2>
+            <p>System software manages the hardware and provides a platform for running application software. The most important type of system software is the operating system (OS).</p>
+            
+            <h3>1.1 Operating System (OS)</h3>
+            <p>The operating system (OS) is a set of software that manages computer hardware and software resources. It provides a user interface and allows users to run applications, manage files, and access hardware devices.</p>
+            <ul>
+                <li><strong>Examples of popular operating systems:</strong> Windows, Linux, macOS.</li>
+                <li><strong>Functions of an OS:</strong>
+                    <ul>
+                        <li><strong>Process Management:</strong> Manages the execution of programs, scheduling tasks, and allocating resources.</li>
+                        <li><strong>Memory Management:</strong> Manages the computer's memory (RAM), ensuring that programs and processes have the required resources.</li>
+                        <li><strong>File Management:</strong> Manages the storage and retrieval of files on storage devices (e.g., hard drives, SSDs).</li>
+                        <li><strong>Device Management:</strong> Controls and manages hardware devices such as printers, keyboards, and storage devices.</li>
+                        <li><strong>Security Management:</strong> Provides security features like user authentication, access control, and data protection.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>1.2 Types of Operating Systems</h3>
+            <ul>
+                <li><strong>Batch Operating System:</strong> Executes jobs in batches without user interaction.</li>
+                <li><strong>Time-Sharing Operating System:</strong> Allows multiple users to interact with the computer simultaneously by allocating time slices for each user.</li>
+                <li><strong>Real-Time Operating System:</strong> Used in systems where tasks must be completed in real-time, such as embedded systems and control systems.</li>
+                <li><strong>Distributed Operating System:</strong> Manages a group of separate computers to appear as one cohesive system to the user.</li>
+            </ul>
+
+            <h2>2. Application Software</h2>
+            <p>Application software refers to programs designed to help users perform specific tasks. Examples of application software include word processors, web browsers, and media players.</p>
+            
+            <h3>2.1 Types of Application Software</h3>
+            <ul>
+                <li><strong>Productivity Software:</strong> Software used for creating documents, spreadsheets, presentations, etc. (e.g., Microsoft Office, Google Docs).</li>
+                <li><strong>Media Software:</strong> Software used to create and edit media files like images, audio, and video (e.g., Adobe Photoshop, VLC Media Player).</li>
+                <li><strong>Web Browsers:</strong> Programs used to access the internet (e.g., Google Chrome, Mozilla Firefox).</li>
+                <li><strong>Utility Software:</strong> Software that performs system maintenance tasks such as antivirus programs, disk cleanup tools, and backup software.</li>
+            </ul>
+
+            <h2>3. Software Development</h2>
+            <p>Software development is the process of designing, coding, testing, and maintaining software applications. This process typically involves several stages:</p>
+            <ul>
+                <li><strong>Planning:</strong> Identifying the purpose and requirements of the software.</li>
+                <li><strong>Design:</strong> Creating a blueprint for the software, including its structure and functionality.</li>
+                <li><strong>Coding:</strong> Writing the actual code using programming languages like Java, C++, or Python.</li>
+                <li><strong>Testing:</strong> Ensuring that the software works as expected and fixing any bugs or issues.</li>
+                <li><strong>Deployment:</strong> Releasing the software for use by the public or specific users.</li>
+            </ul>
+
+            <h2>4. Importance of Software</h2>
+            <p>Software is a critical component of the modern computer system. It enables the use of hardware for a wide range of tasks, from simple calculations to complex data processing. Without software, a computer would be unable to perform any useful functions.</p>
+            
+            <h3>4.1 Importance of System Software</h3>
+            <p>System software provides the necessary foundation for running applications and ensures the proper functioning of the hardware. It is essential for managing resources, providing security, and maintaining overall system performance.</p>
+
+            <h3>4.2 Importance of Application Software</h3>
+            <p>Application software allows users to interact with the computer and perform tasks such as word processing, data analysis, and internet browsing. It has made computers an essential tool in various fields, including education, business, and entertainment.</p>
+
+            <p>In conclusion, both system software and application software are vital for the functionality and usability of computer systems. They work together to enable efficient operation and provide solutions to users' needs.</p>
+            <div class="qa-section">
+                <h2 style="text-align: center;">Questions & Solutions</h2>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q1: What is computer software?</h3>
+                    <div class="answer">
+                        <p>Computer software refers to a set of programs, data, and instructions that tell a computer how to perform specific tasks. It is classified into system software and application software.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q2: What are the different types of software?</h3>
+                    <div class="answer">
+                        <p>Software is mainly categorized into two types:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li><strong>System Software:</strong> Includes the operating system and utility programs that manage hardware and system operations.</li>
+                            <li><strong>Application Software:</strong> Programs designed for end users, such as word processors, media players, and web browsers.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q3: What is an operating system?</h3>
+                    <div class="answer">
+                        <p>An operating system (OS) is system software that manages computer hardware, software resources, and provides services for computer programs. Examples include Windows, macOS, Linux, and Android.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q4: What are the main functions of an operating system?</h3>
+                    <div class="answer">
+                        <p>The operating system performs several key functions:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li>Process management</li>
+                            <li>Memory management</li>
+                            <li>File system management</li>
+                            <li>Device management</li>
+                            <li>Security and user management</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q5: What are the types of operating systems?</h3>
+                    <div class="answer">
+                        <p>Operating systems can be classified into different types based on their functionality:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li><strong>Single-User OS:</strong> Designed for one user at a time (e.g., Windows, macOS).</li>
+                            <li><strong>Multi-User OS:</strong> Allows multiple users to access the system simultaneously (e.g., Unix, Linux).</li>
+                            <li><strong>Real-Time OS:</strong> Used in time-sensitive applications such as robotics and embedded systems.</li>
+                            <li><strong>Distributed OS:</strong> Manages multiple computers as a single system.</li>
+                            <li><strong>Mobile OS:</strong> Designed for mobile devices (e.g., Android, iOS).</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q6: What is the difference between system software and application software?</h3>
+                    <div class="answer">
+                        <p>The key differences are:</p>
+                        <table border="1" style="margin: auto;">
+                            <tr>
+                                <th>System Software</th>
+                                <th>Application Software</th>
+                            </tr>
+                            <tr>
+                                <td>Manages hardware and system resources</td>
+                                <td>Performs specific user tasks</td>
+                            </tr>
+                            <tr>
+                                <td>Runs in the background</td>
+                                <td>Runs when the user initiates it</td>
+                            </tr>
+                            <tr>
+                                <td>Examples: Operating system, utility programs</td>
+                                <td>Examples: Word processor, web browser</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q7: What is the role of device drivers?</h3>
+                    <div class="answer">
+                        <p>A device driver is a specialized system software that allows the operating system to communicate with hardware devices such as printers, graphics cards, and USB devices.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q8: What are utility programs?</h3>
+                    <div class="answer">
+                        <p>Utility programs are system software that help in maintaining, analyzing, and optimizing a computer. Examples include:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li>Antivirus software</li>
+                            <li>Disk cleanup tools</li>
+                            <li>Backup software</li>
+                            <li>File compression tools</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q9: What is open-source software?</h3>
+                    <div class="answer">
+                        <p>Open-source software is software whose source code is freely available for modification and distribution. Examples include Linux, Apache, and LibreOffice.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q10: What is proprietary software?</h3>
+                    <div class="answer">
+                        <p>Proprietary software is software owned by an individual or company, and its source code is not available to the public. Examples include Windows, Microsoft Office, and Adobe Photoshop.</p>
+                    </div>
+                </div>
+            
+            </div>
+            
+            
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let contentWrapper = document.getElementById("content-wrapper");
+            menu.classList.toggle("hidden");
+            contentWrapper.classList.toggle("full-width");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimedia Example</title>
+    <style>
+        /* Apply basic styling to the body */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center; /* Horizontally center content */
+            align-items: flex-start; /* Align content at the top vertically */
+            min-height: 100vh; /* Full viewport height */
+            background-color: #f4f4f4;
+            text-align: center;
+            box-sizing: border-box;
+            overflow-y: auto; /* Allow vertical scrolling */
+            flex-direction: column; /* Stack elements vertically */
+        }
+
+        /* Ensure that the multimedia content doesn't overflow */
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center all items horizontally */
+            justify-content: center;
+        }
+
+        /* Global text styling */
+        h1, h2 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 600px;
+            line-height: 1.6;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Animation for the circle */
+        @keyframes growAndColorChange {
+            0% {
+                transform: scale(1);
+                background-color: yellow;
+            }
+            50% {
+                transform: scale(1.5);
+                background-color: green;
+            }
+            100% {
+                transform: scale(1);
+                background-color: yellow;
+            }
+        }
+
+        .animated-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            animation: growAndColorChange 2s infinite;
+            margin-bottom: 30px;
+            /* Center circle horizontally */
+            align-self: center; /* Ensures circle is centered within its flex container */
+        }
+
+        /* Multimedia elements styling */
+        img, video, audio, iframe, object {
+            margin-bottom: 20px;
+            max-width: 100%;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Text Content -->
+        <h1>Welcome to My Multimedia Page</h1>
+        <p>This page demonstrates multimedia elements like text, images, audio, video, and animations using HTML5 tags.</p>
+
+        <!-- Image -->
+        <h2>Image Example</h2>
+        <img src="image.jpg" alt="Sample Image" width="500" height="300">
+
+        <!-- Audio -->
+        <h2>Audio Example</h2>
+        <audio controls autoplay muted>
+            <source src="audio.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+
+        <!-- Video -->
+        <h2>Video Example</h2>
+        <video controls autoplay muted width="500">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Object Embed (External Media) -->
+        <h2>Object Example</h2>
+        <object data="movie.mp4" type="video/mp4" width="500" height="300">
+            Alternative content if the object cannot be displayed.
+        </object>
+		<!-- Embed-->
+        <h2>Embed Example</h2>
+        <embed src="book.pdf" type="application/pdf" width="600" height="400">
+            
+        </embed>
+        <!-- iframe Example (Embedding a Web Page) -->
+        <h2>Iframe Example</h2>
+        <iframe src="https://www.example.com" width="500" height="300"></iframe>
+
+        <!-- Control Attribute Examples -->
+        <h2>Controls with "1" and "0"</h2>
+        <video autoplay muted controls="1" width="500">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <video autoplay muted width="500">
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Animation Example using CSS -->
+        <h2>CSS Animation Example</h2>
+        <div class="animated-circle"></div>
+    </div>
+
+</body>
+</html>

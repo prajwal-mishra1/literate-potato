@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modern Newspaper</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- CSS Styling -->
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    /* Body Background */
+    body {
+        background: #f9f9f9;
+        padding-top: 80px; /* Space for fixed navbar */
+    }
+
+    /* Header Styling */
+    header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    /* Navigation Bar */
+    nav {
+        margin-top: 10px;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px 15px;
+        transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+        background: #555;
+        border-radius: 5px;
+    }
+
+    /* Main Layout */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    /* Left Column (Main Content) */
+    .leftcolumn {
+        flex: 3;
+        padding-right: 20px;
+    }
+
+    /* Right Column (Sidebar) */
+    .rightcolumn {
+        flex: 1;
+        padding-left: 20px;
+    }
+
+    /* Article Cards */
+    .card {
+        background: white;
+        padding: 20px;
+        padding-top: 40px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+        color: #2c3e50;
+    }
+
+    .card h5 {
+        color: #7f8c8d;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 16px;
+    }
+
+    /* Image Styling */
+    .card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        transition: 0.3s;
+    }
+
+    .card img:hover {
+        opacity: 0.8;
+    }
+
+    /* Sidebar */
+    .rightcolumn .card {
+        background: #ecf0f1;
+    }
+
+    .rightcolumn h3 {
+        color: #34495e;
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 800px) {
+        .row {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .leftcolumn, .rightcolumn {
+            flex: 100%;
+            padding: 0;
+        }
+
+        nav ul {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Today's News</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="newspaper.html">Newspaper</a></li>
+                <li><a href="website.html">Class 11 CS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="row">
+        <!-- Main Article Section -->
+        <div class="leftcolumn">
+            <div class="card">
+                <h2>Headline News: World Leaders Meet for Climate Summit</h2>
+                <h5>Published on Feb 27, 2025</h5>
+                <a href="https://www.example.com/climate-summit"><img src="image1.jpg" alt="Climate Summit"></a>
+                <p>In a historic move, global leaders gathered in Paris to discuss urgent climate action strategies...</p>
+                <p>The summit included representatives from over 40 nations, all emphasizing the need for immediate action to combat climate change...</p>
+            </div>
+
+            <div class="card">
+                <h2>Local News: New Park Opens in Downtown</h2>
+                <h5>Published on Feb 26, 2025</h5>
+                <a href="https://www.example.com/new-park"><img src="image2.jpg" alt="New Park"></a>
+                <p>A new green space has opened its doors to the public in the heart of the city...</p>
+                <p>The park features a variety of recreational spaces, including walking paths, playgrounds, and community gardens...</p>
+            </div>
+
+            <div class="card">
+                <h2>Technology: New Smartphone Revolutionizes Mobile Photography</h2>
+                <h5>Published on Feb 25, 2025</h5>
+                <a href="https://www.example.com/new-smartphone"><img src="image3.jpg" alt="New Smartphone"></a>
+                <p>A groundbreaking new phone was released this week, promising to change the way we think about mobile photography...</p>
+            </div>
+        </div>
+
+        <!-- Sidebar Section -->
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>About Us</h2>
+                <a href="https://www.example.com/about"><img src="image4.jpg" alt="About Us" style="height:100px;"></a>
+                <p>We are a global news platform delivering breaking news, insightful articles, and thoughtful commentary...</p>
+            </div>
+
+            <div class="card">
+                <h3>Popular Articles</h3>
+                <a href="https://www.onlinekhabar.com"><img src="image5.jpeg" alt="Popular Article 1"></a><br>
+                <a href="https://www.onlinekhabar.com"><img src="image6.jpg" alt="Popular Article 2"></a><br>
+                <a href="https://www.onlinekhabar.com"><img src="image7.jpg" alt="Popular Article 3"></a>
+            </div>
+
+            <div class="card">
+                <h3>Follow Us</h3>
+                <p>Stay connected with us through social media for real-time updates!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Today's News | All Rights Reserved</p>
+    </div>
+
+</body>
+</html>

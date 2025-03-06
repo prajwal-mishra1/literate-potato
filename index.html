@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | My Website</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Internal CSS Styling -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Body Background */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: #f9f9f9;
+        }
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Changed from fixed to relative */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navigation Bar */
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+
+        /* Main Layout */
+        main {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+            margin-top: 40px; /* Adjusted to prevent overlap with fixed navbar */
+            margin-bottom: 40px;
+            flex-grow: 1;
+            width: 100%;
+            text-align: center; /* Centers all section elements inside */
+        }
+
+        /* About Me Box */
+        .about-me {
+            background: #ffffff;
+            padding: 20px;
+            margin: auto; /* Centering horizontally */
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-me:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-me h2 {
+            color: #2c3e50;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .about-me p {
+            color: #7f8c8d;
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Features Section */
+        .features {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .features .box {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .features .box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .features h3 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .features ul {
+            list-style-type: square;
+            padding-left: 20px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .features ul li {
+            font-size: 1.1em;
+            color: #34495e;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: auto;
+            position: relative;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 800px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features .box {
+                max-width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="newspaper.html">Newspaper</a></li>
+                <li><a href="website.html">Class 11 CS</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- About Me Box -->
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate web developer with experience in designing modern websites. I enjoy creating clean, user-friendly designs and improving my skills by taking on new challenges. Welcome to my personal website where you can learn more about my work, my thoughts, and my projects.</p>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="box">
+                <h3>My CV</h3>
+                <ul>
+                    <li>Detailed resume with work experience</li>
+                    <li>Skills in various programming languages</li>
+                    <li>Achievements and certifications</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>My Blog</h3>
+                <ul>
+                    <li>Articles on web development</li>
+                    <li>Insights on technology trends</li>
+                    <li>Personal reflections on coding journeys</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Website | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

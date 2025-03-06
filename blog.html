@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Modern Blog</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<!-- CSS Styling -->
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        scroll-behavior: smooth;
+    }
+
+    /* Body Background */
+    body {
+        background: #f9f9f9;
+        padding-top: 80px; /* Space for fixed navbar */
+    }
+
+    /* Header */
+    header {
+        background-color: #333;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    
+    /* Navigation Bar */
+    nav {
+        margin-top: 10px;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+        padding: 10px 15px;
+        transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+        background: #555;
+        border-radius: 5px;
+    }
+
+    /* Main Layout */
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        max-width: 1100px;
+        margin: auto;
+        align-items: flex-start; /* Ensures the sidebar doesn't drop */
+    }
+
+    /* Left Column (Main Content) */
+    .leftcolumn {
+        flex: 3; /* Takes 75% width */
+        padding-right: 20px;
+    }
+
+    /* Right Column (Sidebar) */
+    .rightcolumn {
+        flex: 1; /* Takes 25% width */
+        padding-left: 20px;
+    }
+
+    /* Blog Cards */
+    .card {
+        background: white;
+        padding: 20px;
+        padding-top: 40px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.3s ease-in-out;
+    }
+
+    .card:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h2 {
+        color: #2c3e50;
+    }
+
+    .card h5 {
+        color: #7f8c8d;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+
+    /* Sidebar Styling */
+    .rightcolumn .card {
+        background: #ecf0f1;
+    }
+
+    .rightcolumn h3 {
+        color: #34495e;
+    }
+    .follow-box {
+    text-align: center;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.icon img:hover {
+    transform: scale(1.1);
+}
+
+
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
+        margin-top: 20px;
+        width: 100%;
+        position: relative;
+        bottom: 0;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 800px) {
+        .row {
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .leftcolumn, .rightcolumn {
+            flex: 100%;
+            padding: 0;
+        }
+
+        nav ul {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to My Blog</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="newspaper.html">Newspaper</a></li>
+            <li><a href="website.html">Class 11 CS</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="row">
+    <!-- Main Blog Posts -->
+    <div class="leftcolumn">
+        <div class="card">
+            <h2>The Future of AI: What's Next?</h2>
+            <h5>Published on Jan 5, 2024</h5>
+            <img src="ai.jpeg" alt="AI Future" style="width:100%; border-radius:8px;">
+            <p>Artificial Intelligence is evolving at a rapid pace. But where is it headed?</p>
+            <p>From ChatGPT to self-driving cars, AI is shaping our future. Will it replace jobs, or create new ones? Experts say that AI will revolutionize education, healthcare, and even space exploration...</p>
+        </div>
+        
+        <div class="card">
+            <h2>Top 5 Programming Languages in 2024</h2>
+            <h5>Published on Dec 20, 2023</h5>
+            <img src="langs.jpg" alt="Programming Languages" style="width:100%; border-radius:8px;">
+            <p>Which programming languages will dominate this year?</p>
+            <p>Developers are favoring Python, JavaScript, and Rust. But is Go the future? Check out the trends that are shaping the tech industry in 2024.</p>
+        </div>
+        
+        <div class="card">
+            <h2>The Secret of Productivity: Deep Work</h2>
+            <h5>Published on Nov 15, 2023</h5>
+            <img src="productivity.png" alt="Deep Work Productivity" style="width:100%; border-radius:8px;">
+            <p>Why do some people achieve so much more in less time?</p>
+            <p>Deep Work is the secret. No distractions, no social media—just pure focus. Learn how to master this skill and get more done in half the time!</p>
+        </div>
+    </div>
+
+    <!-- Sidebar Section -->
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>About Me</h2>
+            <img src="avatar.jpg" alt="Prajwal" style="width:100%; height:100%px; border-radius:8px;">
+            <p>Hey, I'm Prajwal! A passionate coder, writer, and tech enthusiast. This blog is where I share insights on programming, AI, and productivity. Stay connected!</p>
+        </div>
+
+        <div class="card">
+            <h3>Did You Know?</h3>
+            <p>💡 The first-ever website was created by Tim Berners-Lee in 1991!</p>
+            <p>💡 The word "robot" comes from the Czech word "robota," meaning forced labor.</p>
+            <p>💡 Python was named after Monty Python, not the snake!</p>
+        </div>
+
+        <div class="card">
+            <h3>Quote of the Day</h3>
+            <p>“Success is not the key to happiness. Happiness is the key to success.” – Albert Schweitzer</p>
+        </div>
+        <div class="card follow-box">
+            <h3>Follow Me</h3>
+            <div class="social-icons">
+                <a href="#" class="icon fb">
+                    <img style="width: 100%;"src="facebook.png" alt="Facebook">
+                </a>
+                <a href="#" class="icon insta">
+                    <img  src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="#" class="icon twitter">
+                    <img style="width: 100%;" src="twitter.png" alt="Twitter">
+                </a>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+<div class="footer">
+    <h2>Footer Section</h2>
+</div>
+
+</body>
+</html>

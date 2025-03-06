@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 1: Computer System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+        }
+
+        h1 {
+            text-align: center; 
+            font-size: 36px; 
+            font-weight: bold; 
+            color: #333; 
+            margin-bottom: 20px; 
+        }
+        .menu {
+            width: 250px;
+            background: #333;
+            padding: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+            color: white;
+            transition: transform 0.3s ease-in-out;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            border-right: 2px solid #444;
+        }
+
+        .menu.hidden {
+            transform: translateX(-100%);
+        }
+
+        .menu h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 24px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu ul li {
+            margin: 15px 0;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            color: white;
+            background: #555;
+            padding: 12px;
+            display: block;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .menu ul li a:hover {
+            background: #ff9800;
+        }
+
+        /* Menu Toggle Button Styles */
+        .menu-toggle {
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px;
+            cursor: pointer;
+            z-index: 1000;
+            border-radius: 5px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            font-size: 24px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-toggle:hover {
+            background: #e68900;
+        }
+        .content-wrapper {
+            margin-left: 270px;
+            width: calc(100% - 270px);
+            transition: margin-left 0.3s ease-in-out;
+        }
+        .content-wrapper.full-width {
+            margin-left: 0;
+            width: 100%;
+        }
+        .content {
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.6;
+            padding: 20px;
+            background: white;
+        }
+        .qa-section {
+            margin-top: 40px;
+        }
+
+        .question {
+            background-color: #f0f0f0;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid #ff9800;
+        }
+
+        .answer {
+            background-color: #e1f5fe;
+            padding: 15px;
+            margin-top: 10px;
+            border-left: 5px solid #2196f3;
+        }
+
+        .question h3 {
+            color: #333;
+        }
+
+        .answer p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="menu" id="menu">
+        <h2>Class 11 <br>Computer Science</h2>
+        <ul>
+            <li><a href="website.html">Home</a></li>
+            <li><a href="chapter1.html">1. Computer System</a></li>
+            <li><a href="chapter2.html">2. Number System and Boolean Logic</a></li>
+            <li><a href="chapter3.html">3. Computer Software and Operating System</a></li>
+            <li><a href="chapter4.html">4. Application Package</a></li>
+            <li><a href="chapter5.html">5. Programming Concepts and Logics</a></li>
+            <li><a href="chapter6.html">6. Web Technology</a></li>
+            <li><a href="chapter7.html">7. Multimedia</a></li>
+            <li><a href="chapter8.html">8. Information Security and Cyber Law</a></li>
+        </ul>
+    </div>
+    <div class="content-wrapper" id="content-wrapper">
+        <div class="content">
+            <h1>Programming Concepts and Logics</h1>
+            <p>Programming is the process of creating a set of instructions that tell the computer how to perform a task. It involves writing code in programming languages to develop software applications, algorithms, and systems. Understanding basic programming concepts and logic is essential for anyone looking to pursue a career in computer science or software development.</p>
+            
+            <h2>1. Introduction to Programming</h2>
+            <p>Programming involves writing code to solve problems and perform tasks. It is often done using high-level programming languages like Python, Java, C++, and others. Each programming language has its syntax and rules, but the core concepts of programming remain the same across different languages.</p>
+    
+            <h2>2. Basic Programming Concepts</h2>
+            <p>To understand programming, it is important to familiarize yourself with a few fundamental concepts:</p>
+    
+            <h3>2.1 Variables and Data Types</h3>
+            <p>A variable is a storage location in memory that holds a value. The value can change during the execution of the program. Data types define the kind of value a variable can hold, such as numbers, text, or boolean values.</p>
+            <ul>
+                <li><strong>Examples of Data Types:</strong>
+                    <ul>
+                        <li><strong>Integer:</strong> Whole numbers (e.g., 1, 2, 3)</li>
+                        <li><strong>Float:</strong> Decimal numbers (e.g., 1.23, 4.56)</li>
+                        <li><strong>String:</strong> A sequence of characters (e.g., "Hello", "World")</li>
+                        <li><strong>Boolean:</strong> True or False values</li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <h3>2.2 Operators</h3>
+            <p>Operators are symbols that perform operations on variables and values. There are several types of operators, including arithmetic, comparison, and logical operators.</p>
+            <ul>
+                <li><strong>Arithmetic Operators:</strong> Used for mathematical operations like addition, subtraction, multiplication, etc. (e.g., +, -, *, /)</li>
+                <li><strong>Comparison Operators:</strong> Used to compare values (e.g., ==, !=, >, <)</li>
+                <li><strong>Logical Operators:</strong> Used to combine conditional statements (e.g., AND, OR, NOT)</li>
+            </ul>
+    
+            <h3>2.3 Control Structures</h3>
+            <p>Control structures allow you to control the flow of execution in a program. These structures include:</p>
+            <ul>
+                <li><strong>If Statements:</strong> Used to make decisions based on conditions. For example, if a condition is true, execute a block of code.</li>
+                <li><strong>Loops:</strong> Used to repeat a block of code multiple times. Common loops include <strong>for</strong> loops and <strong>while</strong> loops.</li>
+                <li><strong>Switch/Case Statements:</strong> A simplified way of handling multiple conditions.</li>
+            </ul>
+    
+            <h2>3. Logic and Problem Solving</h2>
+            <p>Programming is not just about writing code; it’s also about problem solving. The ability to break down complex problems into smaller, manageable parts is key to writing efficient programs.</p>
+    
+            <h3>3.1 Algorithms</h3>
+            <p>An algorithm is a step-by-step procedure used to perform a task or solve a problem. It can be represented in different forms, such as flowcharts, pseudocode, or plain text.</p>
+            <ul>
+                <li><strong>Example:</strong> An algorithm to find the largest number in a list could involve looping through each element and comparing it to the current largest number.</li>
+            </ul>
+    
+            <h3>3.2 Flowcharts</h3>
+            <p>A flowchart is a graphical representation of an algorithm. It uses different shapes to represent operations, decisions, and flow of control in a program.</p>
+            <ul>
+                <li><strong>Oval:</strong> Represents the start or end of the algorithm.</li>
+                <li><strong>Rectangle:</strong> Represents an operation or process.</li>
+                <li><strong>Diamond:</strong> Represents a decision point (if/else conditions).</li>
+            </ul>
+    
+            <h2>4. Functions and Procedures</h2>
+            <p>Functions and procedures are blocks of code that perform specific tasks. They are designed to help break programs into smaller, reusable chunks, making them easier to manage and debug.</p>
+    
+            <h3>4.1 Functions</h3>
+            <p>A function is a block of code that performs a specific task and returns a value. Functions allow for code reuse and modularity.</p>
+            <ul>
+                <li><strong>Example:</strong> A function that calculates the sum of two numbers.</li>
+            </ul>
+    
+            <h3>4.2 Procedures</h3>
+            <p>A procedure is similar to a function but does not return a value. It is typically used to perform a task or action without giving a result back to the caller.</p>
+    
+            <h2>5. Object-Oriented Programming (OOP)</h2>
+            <p>Object-Oriented Programming (OOP) is a programming paradigm based on the concept of "objects." An object is an instance of a class, which is a blueprint for creating objects. OOP is based on four key principles:</p>
+            <ul>
+                <li><strong>Encapsulation:</strong> The bundling of data and methods that operate on that data within a single unit (class).</li>
+                <li><strong>Inheritance:</strong> The ability for a new class to inherit properties and behaviors from an existing class.</li>
+                <li><strong>Polymorphism:</strong> The ability of different classes to be treated as instances of the same class through inheritance.</li>
+                <li><strong>Abstraction:</strong> Hiding the complex implementation details and exposing only the necessary parts of an object.</li>
+            </ul>
+    
+            <h2>6. Debugging and Testing</h2>
+            <p>Debugging is the process of finding and fixing errors (bugs) in a program. Testing is the process of evaluating the software to ensure it works as expected. Both are crucial steps in software development to ensure the quality and functionality of the program.</p>
+            <ul>
+                <li><strong>Debugging Tools:</strong> Integrated Development Environments (IDEs) often provide debugging tools like breakpoints, variable watchers, and step-through execution.</li>
+                <li><strong>Types of Testing:</strong> Unit testing (testing individual parts), integration testing (testing interactions between components), and system testing (testing the complete system).</li>
+            </ul>
+    
+            <h2>7. Importance of Programming</h2>
+            <p>Programming is a foundational skill in the modern world. It drives innovation, creates software solutions, and enables the development of technologies that affect almost every aspect of our lives. From simple applications to complex artificial intelligence systems, programming is a powerful tool for solving real-world problems.</p>
+    
+            <h3>7.1 Career Opportunities</h3>
+            <p>Programming skills open doors to a wide range of careers in various industries, including software development, web development, data science, machine learning, game development, and more. With the increasing demand for technology solutions, programmers are highly sought after in the job market.</p>
+    
+            <h2>8. Conclusion</h2>
+            <p>Programming is the backbone of the digital world, and understanding its core concepts and logic is crucial for anyone looking to work in technology. By mastering programming fundamentals such as variables, loops, control structures, and algorithms, you can begin building your own software applications and solving complex problems.</p>
+            <div class="qa-section">
+                <h2 style="text-align: center;">Questions & Solutions</h2>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q1: What is programming?</h3>
+                    <div class="answer">
+                        <p>Programming is the process of designing and writing instructions for a computer to execute, using a programming language.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q2: What are the types of programming languages?</h3>
+                    <div class="answer">
+                        <p>Programming languages are categorized into:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li><strong>Low-Level Languages:</strong> Machine language and assembly language.</li>
+                            <li><strong>High-Level Languages:</strong> Python, Java, C++, etc.</li>
+                            <li><strong>Markup Languages:</strong> HTML, XML.</li>
+                            <li><strong>Scripting Languages:</strong> JavaScript, PHP, Python.</li>
+                            <li><strong>Query Languages:</strong> SQL (Structured Query Language).</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q3: What is the difference between a compiler and an interpreter?</h3>
+                    <div class="answer">
+                        <table border="1" style="margin: auto;">
+                            <tr>
+                                <th>Compiler</th>
+                                <th>Interpreter</th>
+                            </tr>
+                            <tr>
+                                <td>Translates the entire code before execution.</td>
+                                <td>Translates code line by line during execution.</td>
+                            </tr>
+                            <tr>
+                                <td>Faster execution after compilation.</td>
+                                <td>Slower due to real-time translation.</td>
+                            </tr>
+                            <tr>
+                                <td>Examples: C, C++.</td>
+                                <td>Examples: Python, JavaScript.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q4: What are the basic components of a programming language?</h3>
+                    <div class="answer">
+                        <p>The basic components of a programming language include:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li>Syntax: Rules that define the structure.</li>
+                            <li>Variables and Data Types.</li>
+                            <li>Operators (Arithmetic, Logical, Relational).</li>
+                            <li>Control Structures (Loops, Conditionals).</li>
+                            <li>Functions and Procedures.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q5: What is an algorithm?</h3>
+                    <div class="answer">
+                        <p>An algorithm is a step-by-step procedure used to solve a problem logically and efficiently.</p>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q6: What are flowcharts and pseudocode?</h3>
+                    <div class="answer">
+                        <ul style="display: inline-block; text-align: left;">
+                            <li><strong>Flowchart:</strong> A visual representation of an algorithm using symbols.</li>
+                            <li><strong>Pseudocode:</strong> A textual representation of an algorithm using a structured format similar to programming syntax.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q7: What are the different types of errors in programming?</h3>
+                    <div class="answer">
+                        <ul style="display: inline-block; text-align: left;">
+                            <li><strong>Syntax Errors:</strong> Violations of language rules.</li>
+                            <li><strong>Runtime Errors:</strong> Errors that occur during execution (e.g., division by zero).</li>
+                            <li><strong>Logical Errors:</strong> Errors that cause incorrect output.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q8: What are loops in programming?</h3>
+                    <div class="answer">
+                        <p>Loops allow the execution of a block of code multiple times. Types of loops include:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li><strong>For Loop:</strong> Iterates a fixed number of times.</li>
+                            <li><strong>While Loop:</strong> Repeats while a condition is true.</li>
+                            <li><strong>Do-While Loop:</strong> Executes at least once before checking the condition.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q9: What are conditional statements?</h3>
+                    <div class="answer">
+                        <p>Conditional statements control decision-making in programs. Examples include:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li><strong>If-Else:</strong> Executes different blocks based on conditions.</li>
+                            <li><strong>Switch Statement:</strong> Selects a case from multiple options.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q10: What is object-oriented programming (OOP)?</h3>
+                    <div class="answer">
+                        <p>OOP is a programming paradigm based on objects and classes. Key principles include:</p>
+                        <ul style="display: inline-block; text-align: left;">
+                            <li><strong>Encapsulation:</strong> Data hiding within objects.</li>
+                            <li><strong>Inheritance:</strong> Creating new classes from existing ones.</li>
+                            <li><strong>Polymorphism:</strong> Multiple behaviors for the same function.</li>
+                            <li><strong>Abstraction:</strong> Hiding complex details from the user.</li>
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q11: What is the difference between structured and object-oriented programming?</h3>
+                    <div class="answer">
+                        <table border="1" style="margin: auto;">
+                            <tr>
+                                <th>Structured Programming</th>
+                                <th>Object-Oriented Programming</th>
+                            </tr>
+                            <tr>
+                                <td>Uses functions and procedures.</td>
+                                <td>Uses objects and classes.</td>
+                            </tr>
+                            <tr>
+                                <td>Focuses on step-by-step execution.</td>
+                                <td>Focuses on data encapsulation and reuse.</td>
+                            </tr>
+                            <tr>
+                                <td>Examples: C, Pascal.</td>
+                                <td>Examples: Java, Python, C++.</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            
+                <div class="question" style="text-align: center;">
+                    <h3>Q12: What are some popular programming languages and their uses?</h3>
+                    <div class="answer">
+                        <table border="1" style="margin: auto;">
+                            <tr>
+                                <th>Language</th>
+                                <th>Use Case</th>
+                            </tr>
+                            <tr>
+                                <td>Python</td>
+                                <td>AI, data science, web development</td>
+                            </tr>
+                            <tr>
+                                <td>Java</td>
+                                <td>Android apps, enterprise applications</td>
+                            </tr>
+                            <tr>
+                                <td>C++</td>
+                                <td>Game development, system software</td>
+                            </tr>
+                            <tr>
+                                <td>JavaScript</td>
+                                <td>Web development</td>
+                            </tr>
+                            <tr>
+                                <td>SQL</td>
+                                <td>Database management</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            
+            </div>
+            
+        </div>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            let menu = document.getElementById("menu");
+            let contentWrapper = document.getElementById("content-wrapper");
+            menu.classList.toggle("hidden");
+            contentWrapper.classList.toggle("full-width");
+        }
+    </script>
+</body>
+</html>
